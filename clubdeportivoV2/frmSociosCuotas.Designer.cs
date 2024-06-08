@@ -27,8 +27,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSociosCuotas));
             this.btnListarSocios = new System.Windows.Forms.Button();
             this.lblListadoSocios = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.btnListarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarSocios.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarSocios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarSocios.Location = new System.Drawing.Point(826, 147);
+            this.btnListarSocios.Location = new System.Drawing.Point(804, 147);
             this.btnListarSocios.Name = "btnListarSocios";
             this.btnListarSocios.Size = new System.Drawing.Size(142, 54);
             this.btnListarSocios.TabIndex = 0;
@@ -77,17 +77,17 @@
             this.dtpFechaListaSocios.CustomFormat = "  dd / MM / yyyy";
             this.dtpFechaListaSocios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaListaSocios.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaListaSocios.Location = new System.Drawing.Point(388, 160);
+            this.dtpFechaListaSocios.Location = new System.Drawing.Point(464, 160);
             this.dtpFechaListaSocios.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaListaSocios.Name = "dtpFechaListaSocios";
-            this.dtpFechaListaSocios.Size = new System.Drawing.Size(406, 30);
+            this.dtpFechaListaSocios.Size = new System.Drawing.Size(292, 30);
             this.dtpFechaListaSocios.TabIndex = 2;
             // 
             // lblIngresoFecha
             // 
             this.lblIngresoFecha.AutoSize = true;
             this.lblIngresoFecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresoFecha.Location = new System.Drawing.Point(226, 159);
+            this.lblIngresoFecha.Location = new System.Drawing.Point(287, 159);
             this.lblIngresoFecha.Name = "lblIngresoFecha";
             this.lblIngresoFecha.Size = new System.Drawing.Size(137, 28);
             this.lblIngresoFecha.TabIndex = 3;
@@ -103,14 +103,14 @@
             this.dgvListadoSocios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListadoSocios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvListadoSocios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListadoSocios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListadoSocios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvListadoSocios.ColumnHeadersHeight = 61;
             this.dgvListadoSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
@@ -120,14 +120,14 @@
             this.correoC,
             this.fecha,
             this.fechaVenc});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(244)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListadoSocios.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(244)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListadoSocios.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgvListadoSocios.EnableHeadersVisualStyles = false;
             this.dgvListadoSocios.GridColor = System.Drawing.Color.LightGray;
             this.dgvListadoSocios.Location = new System.Drawing.Point(39, 263);

@@ -38,5 +38,14 @@ namespace clubdeportivoV2
             registro.Show();
             this.Hide();
         }
+
+        private void btnListarCuotasVenc_Click(object sender, EventArgs e)
+        {
+            // Al hacer click en el botón de listar socios con
+            // cuotas a vencer pasamos a su formulario y ocultamos la ventana principal del menú
+            frmSociosCuotas listaCuotas = new frmSociosCuotas();
+            listaCuotas.Show();
+            this.Hide();
+        }
     }
 }

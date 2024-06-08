@@ -29,10 +29,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlNavBar = new System.Windows.Forms.Panel();
-            this.picNavLogo = new System.Windows.Forms.PictureBox();
-            this.lblIngreso = new System.Windows.Forms.Label();
-            this.picUsuarioLogueado = new System.Windows.Forms.PictureBox();
             this.btnSalirNav = new System.Windows.Forms.Button();
+            this.picUsuarioLogueado = new System.Windows.Forms.PictureBox();
+            this.lblIngreso = new System.Windows.Forms.Label();
+            this.picNavLogo = new System.Windows.Forms.PictureBox();
             this.btnRegistrarC = new System.Windows.Forms.Button();
             this.btnAbonar = new System.Windows.Forms.Button();
             this.btnListarCuotasVenc = new System.Windows.Forms.Button();
@@ -40,8 +40,8 @@
             this.picAbonar = new System.Windows.Forms.PictureBox();
             this.picCuotasVenc = new System.Windows.Forms.PictureBox();
             this.pnlNavBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarioLogueado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNavLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRegistrarC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAbonar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCuotasVenc)).BeginInit();
@@ -58,38 +58,6 @@
             this.pnlNavBar.Name = "pnlNavBar";
             this.pnlNavBar.Size = new System.Drawing.Size(1318, 105);
             this.pnlNavBar.TabIndex = 0;
-            // 
-            // picNavLogo
-            // 
-            this.picNavLogo.BackColor = System.Drawing.Color.White;
-            this.picNavLogo.Image = ((System.Drawing.Image)(resources.GetObject("picNavLogo.Image")));
-            this.picNavLogo.Location = new System.Drawing.Point(33, 32);
-            this.picNavLogo.Name = "picNavLogo";
-            this.picNavLogo.Size = new System.Drawing.Size(162, 203);
-            this.picNavLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picNavLogo.TabIndex = 0;
-            this.picNavLogo.TabStop = false;
-            // 
-            // lblIngreso
-            // 
-            this.lblIngreso.AutoSize = true;
-            this.lblIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngreso.ForeColor = System.Drawing.Color.Cyan;
-            this.lblIngreso.Location = new System.Drawing.Point(674, 44);
-            this.lblIngreso.Name = "lblIngreso";
-            this.lblIngreso.Size = new System.Drawing.Size(399, 23);
-            this.lblIngreso.TabIndex = 0;
-            this.lblIngreso.Text = "USUARIO: usuarioPrueba (Administrador)";
-            // 
-            // picUsuarioLogueado
-            // 
-            this.picUsuarioLogueado.Image = ((System.Drawing.Image)(resources.GetObject("picUsuarioLogueado.Image")));
-            this.picUsuarioLogueado.Location = new System.Drawing.Point(625, 32);
-            this.picUsuarioLogueado.Name = "picUsuarioLogueado";
-            this.picUsuarioLogueado.Size = new System.Drawing.Size(43, 38);
-            this.picUsuarioLogueado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picUsuarioLogueado.TabIndex = 2;
-            this.picUsuarioLogueado.TabStop = false;
             // 
             // btnSalirNav
             // 
@@ -108,6 +76,38 @@
             this.btnSalirNav.Text = "SALIR";
             this.btnSalirNav.UseVisualStyleBackColor = false;
             this.btnSalirNav.Click += new System.EventHandler(this.btnSalirNav_Click);
+            // 
+            // picUsuarioLogueado
+            // 
+            this.picUsuarioLogueado.Image = ((System.Drawing.Image)(resources.GetObject("picUsuarioLogueado.Image")));
+            this.picUsuarioLogueado.Location = new System.Drawing.Point(625, 32);
+            this.picUsuarioLogueado.Name = "picUsuarioLogueado";
+            this.picUsuarioLogueado.Size = new System.Drawing.Size(43, 38);
+            this.picUsuarioLogueado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picUsuarioLogueado.TabIndex = 2;
+            this.picUsuarioLogueado.TabStop = false;
+            // 
+            // lblIngreso
+            // 
+            this.lblIngreso.AutoSize = true;
+            this.lblIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngreso.ForeColor = System.Drawing.Color.Cyan;
+            this.lblIngreso.Location = new System.Drawing.Point(674, 44);
+            this.lblIngreso.Name = "lblIngreso";
+            this.lblIngreso.Size = new System.Drawing.Size(399, 23);
+            this.lblIngreso.TabIndex = 0;
+            this.lblIngreso.Text = "USUARIO: usuarioPrueba (Administrador)";
+            // 
+            // picNavLogo
+            // 
+            this.picNavLogo.BackColor = System.Drawing.Color.White;
+            this.picNavLogo.Image = ((System.Drawing.Image)(resources.GetObject("picNavLogo.Image")));
+            this.picNavLogo.Location = new System.Drawing.Point(33, 32);
+            this.picNavLogo.Name = "picNavLogo";
+            this.picNavLogo.Size = new System.Drawing.Size(162, 203);
+            this.picNavLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNavLogo.TabIndex = 0;
+            this.picNavLogo.TabStop = false;
             // 
             // btnRegistrarC
             // 
@@ -145,6 +145,7 @@
             this.btnListarCuotasVenc.TabIndex = 3;
             this.btnListarCuotasVenc.Text = "LISTAR SOCIOS CON CUOTAS A VENCER";
             this.btnListarCuotasVenc.UseVisualStyleBackColor = false;
+            this.btnListarCuotasVenc.Click += new System.EventHandler(this.btnListarCuotasVenc_Click);
             // 
             // picRegistrarC
             // 
@@ -198,8 +199,8 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pnlNavBar.ResumeLayout(false);
             this.pnlNavBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarioLogueado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNavLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRegistrarC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAbonar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCuotasVenc)).EndInit();
