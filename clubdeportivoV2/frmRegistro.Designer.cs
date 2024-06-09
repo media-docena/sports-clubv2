@@ -50,6 +50,7 @@
             this.lblCorreoC = new System.Windows.Forms.Label();
             this.lblTipoC = new System.Windows.Forms.Label();
             this.btnVolverRegC = new System.Windows.Forms.Button();
+            this.lblDNI = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picRegC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,11 +287,22 @@
             this.btnVolverRegC.UseVisualStyleBackColor = false;
             this.btnVolverRegC.Click += new System.EventHandler(this.btnVolverRegC_Click);
             // 
+            // lblDNI
+            // 
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Location = new System.Drawing.Point(880, 433);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(44, 22);
+            this.lblDNI.TabIndex = 22;
+            this.lblDNI.Text = "DNI";
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 692);
+            this.Controls.Add(this.lblDNI);
             this.Controls.Add(this.btnVolverRegC);
             this.Controls.Add(this.lblTipoC);
             this.Controls.Add(this.lblCorreoC);
@@ -349,5 +361,6 @@
         private System.Windows.Forms.Label lblCorreoC;
         private System.Windows.Forms.Label lblTipoC;
         private System.Windows.Forms.Button btnVolverRegC;
+        private System.Windows.Forms.Label lblDNI;
     }
 }

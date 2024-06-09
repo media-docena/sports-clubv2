@@ -27,38 +27,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSociosCuotas));
-            this.btnListarSocios = new System.Windows.Forms.Button();
+            this.btnListaSocios = new System.Windows.Forms.Button();
             this.lblListadoSocios = new System.Windows.Forms.Label();
             this.dtpFechaListaSocios = new System.Windows.Forms.DateTimePicker();
             this.lblIngresoFecha = new System.Windows.Forms.Label();
-            this.dgvListadoSocios = new System.Windows.Forms.DataGridView();
+            this.dgvListadoCuotas = new System.Windows.Forms.DataGridView();
+            this.btnVolverListaSocio = new System.Windows.Forms.Button();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaVenc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVolverListaSocio = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoCuotas)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnListarSocios
+            // btnListaSocios
             // 
-            this.btnListarSocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(193)))));
-            this.btnListarSocios.FlatAppearance.BorderSize = 0;
-            this.btnListarSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarSocios.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarSocios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarSocios.Location = new System.Drawing.Point(804, 147);
-            this.btnListarSocios.Name = "btnListarSocios";
-            this.btnListarSocios.Size = new System.Drawing.Size(142, 54);
-            this.btnListarSocios.TabIndex = 0;
-            this.btnListarSocios.Text = "CONFIRMAR";
-            this.btnListarSocios.UseVisualStyleBackColor = false;
+            this.btnListaSocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(193)))));
+            this.btnListaSocios.FlatAppearance.BorderSize = 0;
+            this.btnListaSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaSocios.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaSocios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnListaSocios.Location = new System.Drawing.Point(804, 133);
+            this.btnListaSocios.Name = "btnListaSocios";
+            this.btnListaSocios.Size = new System.Drawing.Size(142, 54);
+            this.btnListaSocios.TabIndex = 0;
+            this.btnListaSocios.Text = "CONFIRMAR";
+            this.btnListaSocios.UseVisualStyleBackColor = false;
+            this.btnListaSocios.Click += new System.EventHandler(this.btnListaSocios_Click);
             // 
             // lblListadoSocios
             // 
@@ -77,7 +79,7 @@
             this.dtpFechaListaSocios.CustomFormat = "  dd / MM / yyyy";
             this.dtpFechaListaSocios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaListaSocios.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaListaSocios.Location = new System.Drawing.Point(464, 160);
+            this.dtpFechaListaSocios.Location = new System.Drawing.Point(464, 146);
             this.dtpFechaListaSocios.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaListaSocios.Name = "dtpFechaListaSocios";
             this.dtpFechaListaSocios.Size = new System.Drawing.Size(292, 30);
@@ -87,60 +89,83 @@
             // 
             this.lblIngresoFecha.AutoSize = true;
             this.lblIngresoFecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresoFecha.Location = new System.Drawing.Point(287, 159);
+            this.lblIngresoFecha.Location = new System.Drawing.Point(291, 144);
             this.lblIngresoFecha.Name = "lblIngresoFecha";
             this.lblIngresoFecha.Size = new System.Drawing.Size(137, 28);
             this.lblIngresoFecha.TabIndex = 3;
             this.lblIngresoFecha.Text = "Ingresar Fecha";
             // 
-            // dgvListadoSocios
+            // dgvListadoCuotas
             // 
-            this.dgvListadoSocios.AllowUserToAddRows = false;
-            this.dgvListadoSocios.AllowUserToDeleteRows = false;
-            this.dgvListadoSocios.AllowUserToResizeColumns = false;
-            this.dgvListadoSocios.AllowUserToResizeRows = false;
-            this.dgvListadoSocios.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListadoSocios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvListadoSocios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvListadoSocios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListadoSocios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
-            this.dgvListadoSocios.ColumnHeadersHeight = 61;
-            this.dgvListadoSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListadoCuotas.AllowUserToAddRows = false;
+            this.dgvListadoCuotas.AllowUserToDeleteRows = false;
+            this.dgvListadoCuotas.AllowUserToOrderColumns = true;
+            this.dgvListadoCuotas.AllowUserToResizeColumns = false;
+            this.dgvListadoCuotas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
+            this.dgvListadoCuotas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListadoCuotas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListadoCuotas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvListadoCuotas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvListadoCuotas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListadoCuotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListadoCuotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListadoCuotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
             this.nombreC,
-            this.apellidoC,
             this.telC,
             this.correoC,
+            this.abono,
             this.fecha,
             this.fechaVenc});
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(244)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListadoSocios.DefaultCellStyle = dataGridViewCellStyle34;
-            this.dgvListadoSocios.EnableHeadersVisualStyles = false;
-            this.dgvListadoSocios.GridColor = System.Drawing.Color.LightGray;
-            this.dgvListadoSocios.Location = new System.Drawing.Point(39, 263);
-            this.dgvListadoSocios.MultiSelect = false;
-            this.dgvListadoSocios.Name = "dgvListadoSocios";
-            this.dgvListadoSocios.ReadOnly = true;
-            this.dgvListadoSocios.RowHeadersVisible = false;
-            this.dgvListadoSocios.RowHeadersWidth = 51;
-            this.dgvListadoSocios.RowTemplate.DividerHeight = 2;
-            this.dgvListadoSocios.RowTemplate.Height = 25;
-            this.dgvListadoSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListadoSocios.Size = new System.Drawing.Size(1172, 273);
-            this.dgvListadoSocios.TabIndex = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListadoCuotas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvListadoCuotas.EnableHeadersVisualStyles = false;
+            this.dgvListadoCuotas.GridColor = System.Drawing.Color.LightGray;
+            this.dgvListadoCuotas.Location = new System.Drawing.Point(39, 235);
+            this.dgvListadoCuotas.MultiSelect = false;
+            this.dgvListadoCuotas.Name = "dgvListadoCuotas";
+            this.dgvListadoCuotas.ReadOnly = true;
+            this.dgvListadoCuotas.RowHeadersVisible = false;
+            this.dgvListadoCuotas.RowHeadersWidth = 51;
+            this.dgvListadoCuotas.RowTemplate.Height = 25;
+            this.dgvListadoCuotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListadoCuotas.Size = new System.Drawing.Size(1266, 318);
+            this.dgvListadoCuotas.TabIndex = 4;
+            // 
+            // btnVolverListaSocio
+            // 
+            this.btnVolverListaSocio.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolverListaSocio.FlatAppearance.BorderSize = 0;
+            this.btnVolverListaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverListaSocio.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverListaSocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
+            this.btnVolverListaSocio.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverListaSocio.Image")));
+            this.btnVolverListaSocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVolverListaSocio.Location = new System.Drawing.Point(1105, 584);
+            this.btnVolverListaSocio.Name = "btnVolverListaSocio";
+            this.btnVolverListaSocio.Size = new System.Drawing.Size(240, 63);
+            this.btnVolverListaSocio.TabIndex = 22;
+            this.btnVolverListaSocio.Text = "VOLVER";
+            this.btnVolverListaSocio.UseVisualStyleBackColor = false;
+            this.btnVolverListaSocio.Click += new System.EventHandler(this.btnVolverListaSocio_Click);
             // 
             // IdCliente
             // 
@@ -149,24 +174,17 @@
             this.IdCliente.MinimumWidth = 6;
             this.IdCliente.Name = "IdCliente";
             this.IdCliente.ReadOnly = true;
+            this.IdCliente.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // nombreC
             // 
             this.nombreC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreC.FillWeight = 120F;
+            this.nombreC.FillWeight = 180F;
             this.nombreC.HeaderText = "Nombre";
             this.nombreC.MinimumWidth = 6;
             this.nombreC.Name = "nombreC";
             this.nombreC.ReadOnly = true;
-            // 
-            // apellidoC
-            // 
-            this.apellidoC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.apellidoC.FillWeight = 120F;
-            this.apellidoC.HeaderText = "Apellido";
-            this.apellidoC.MinimumWidth = 6;
-            this.apellidoC.Name = "apellidoC";
-            this.apellidoC.ReadOnly = true;
+            this.nombreC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // telC
             // 
@@ -180,11 +198,19 @@
             // correoC
             // 
             this.correoC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.correoC.FillWeight = 150F;
+            this.correoC.FillWeight = 250F;
             this.correoC.HeaderText = "Correo";
             this.correoC.MinimumWidth = 6;
             this.correoC.Name = "correoC";
             this.correoC.ReadOnly = true;
+            // 
+            // abono
+            // 
+            this.abono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.abono.HeaderText = "Abonó";
+            this.abono.MinimumWidth = 6;
+            this.abono.Name = "abono";
+            this.abono.ReadOnly = true;
             // 
             // fecha
             // 
@@ -204,41 +230,24 @@
             this.fechaVenc.Name = "fechaVenc";
             this.fechaVenc.ReadOnly = true;
             // 
-            // btnVolverListaSocio
-            // 
-            this.btnVolverListaSocio.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolverListaSocio.FlatAppearance.BorderSize = 0;
-            this.btnVolverListaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverListaSocio.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverListaSocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
-            this.btnVolverListaSocio.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverListaSocio.Image")));
-            this.btnVolverListaSocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolverListaSocio.Location = new System.Drawing.Point(1032, 570);
-            this.btnVolverListaSocio.Name = "btnVolverListaSocio";
-            this.btnVolverListaSocio.Size = new System.Drawing.Size(227, 63);
-            this.btnVolverListaSocio.TabIndex = 22;
-            this.btnVolverListaSocio.Text = "VOLVER";
-            this.btnVolverListaSocio.UseVisualStyleBackColor = false;
-            this.btnVolverListaSocio.Click += new System.EventHandler(this.btnVolverListaSocio_Click);
-            // 
             // frmSociosCuotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 645);
+            this.ClientSize = new System.Drawing.Size(1356, 668);
             this.Controls.Add(this.btnVolverListaSocio);
-            this.Controls.Add(this.dgvListadoSocios);
+            this.Controls.Add(this.dgvListadoCuotas);
             this.Controls.Add(this.lblIngresoFecha);
             this.Controls.Add(this.dtpFechaListaSocios);
             this.Controls.Add(this.lblListadoSocios);
-            this.Controls.Add(this.btnListarSocios);
+            this.Controls.Add(this.btnListaSocios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSociosCuotas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTADO DE CUOTAS DE SOCIOS";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoCuotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,18 +255,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnListarSocios;
+        private System.Windows.Forms.Button btnListaSocios;
         private System.Windows.Forms.Label lblListadoSocios;
         private System.Windows.Forms.DateTimePicker dtpFechaListaSocios;
         private System.Windows.Forms.Label lblIngresoFecha;
-        private System.Windows.Forms.DataGridView dgvListadoSocios;
+        private System.Windows.Forms.DataGridView dgvListadoCuotas;
+        private System.Windows.Forms.Button btnVolverListaSocio;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoC;
         private System.Windows.Forms.DataGridViewTextBoxColumn telC;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abono;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaVenc;
-        private System.Windows.Forms.Button btnVolverListaSocio;
     }
 }
