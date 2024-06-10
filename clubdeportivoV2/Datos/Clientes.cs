@@ -14,7 +14,7 @@ namespace clubdeportivoV2.Datos
         public string Nuevo_Cliente(E_Cliente cliente)
         {
             string salida;
-
+            
             MySqlConnection sqlCon = new MySqlConnection();
             try {
                 sqlCon = Conexion.getInstancia().CrearConexion();
@@ -27,6 +27,8 @@ namespace clubdeportivoV2.Datos
                 comando.Parameters.Add("Tel", MySqlDbType.VarChar).Value = cliente.TelC;
                 comando.Parameters.Add("Correo", MySqlDbType.VarChar).Value = cliente.CorreoC;
                 comando.Parameters.Add("Tipo", MySqlDbType.VarChar).Value = cliente.TipoC;
+                comando.Parameters.Add("AptoF", MySqlDbType.VarChar).Value = cliente.AptoFisico ? 1 : 0; // El ternario asigna el valor de tipo numérico
+                                                                                                         // almacenado en la bd para el atributo booleano.
 
                 MySqlParameter parCodigo = new MySqlParameter();
                 parCodigo.ParameterName = "rta";

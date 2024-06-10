@@ -57,7 +57,7 @@ namespace clubdeportivoV2
                         int fila = dgvListadoCuotas.Rows.Add();
                         dgvListadoCuotas.Rows[fila].Cells[0].Value = reader.GetInt32(0);
                         dgvListadoCuotas.Rows[fila].Cells[1].Value = reader.GetString(1);
-                        dgvListadoCuotas.Rows[fila].Cells[2].Value = reader.GetInt32(2);
+                        dgvListadoCuotas.Rows[fila].Cells[2].Value = reader.GetString(2);
                         dgvListadoCuotas.Rows[fila].Cells[3].Value = reader.GetString(3);
                         dgvListadoCuotas.Rows[fila].Cells[4].Value = reader.GetFloat(4);
                         dgvListadoCuotas.Rows[fila].Cells[5].Value = reader.GetDateTime(5).ToString("dd/MM/yyyy");

@@ -8,9 +8,9 @@ namespace clubdeportivoV2.Entidades
 {
     public class E_No_Socio : E_Cliente
     {
-        public E_No_Socio(string nombreC, string apellidoC, string dniC, int telC,
-                          string correoC, string tipoC, bool estadoC, int? idCliente = null) : base(nombreC,
-                          apellidoC, dniC, telC, correoC, tipoC, estadoC, idCliente)
+        public E_No_Socio(string nombreC, string apellidoC, string dniC, string telC,
+                          string correoC, string tipoC, bool aptoFisico, bool estadoC, int? idCliente = null) : base(nombreC,
+                          apellidoC, dniC, telC, correoC, tipoC, aptoFisico, estadoC, idCliente)
         { }
     }
 }

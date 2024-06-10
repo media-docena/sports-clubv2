@@ -13,9 +13,15 @@ namespace clubdeportivoV2
 {
     public partial class frmRegistro : Form
     {
+        bool aptoFisico; // declaramos la varible para asignarle la opción seleccionada en el formulario.
         public frmRegistro()
         {
             InitializeComponent();
+            cargarComboBox();
+        }
+
+        private void cargarComboBox()
+        {
             cboTipoC.Items.Add("Socio");
             cboTipoC.Items.Add("No Socio");
         }
@@ -33,16 +39,17 @@ namespace clubdeportivoV2
 
                 string nombre = txtNombreC.Text;
                 string apellido = txtApellidoC.Text;
-                int tel = Convert.ToInt32(txtTelC.Text);
+                string tel = txtTelC.Text;
                 string correo = txtCorreoC.Text;
                 string tipoCliente = cboTipoC.Text;
                 string DNI = txtDNIC.Text;
-
+                bool aptoF = aptoFisico;
+                Console.WriteLine(aptoFisico);
                 if (tipoCliente.ToLower() == "socio") {
-                    cliente = new E_Socio(nombre, apellido, DNI, tel, correo, tipoCliente, true);
+                    cliente = new E_Socio(nombre, apellido, DNI, tel, correo, tipoCliente,aptoF, true);
                 }
                 else {
-                    cliente = new E_No_Socio(nombre, apellido, DNI, tel, correo, tipoCliente, true);
+                    cliente = new E_No_Socio(nombre, apellido, DNI, tel, correo, tipoCliente,aptoF, true);
                 }
 
                 // instanciamos para usar el método dentro de clientes
@@ -79,7 +86,19 @@ namespace clubdeportivoV2
             txtCorreoC.Text = "";
             txtDNIC.Text = "";
             cboTipoC.Text = "";
+            rdoSi.Checked = false;
+            rdoNo.Checked = false;
             txtNombreC.Focus();
+        }
+
+        private void rdoSi_CheckedChanged(object sender, EventArgs e)
+        {
+            aptoFisico = true;
+        }
+
+        private void rdoNo_CheckedChanged(object sender, EventArgs e)
+        {
+            aptoFisico = false;
         }
     }
 }

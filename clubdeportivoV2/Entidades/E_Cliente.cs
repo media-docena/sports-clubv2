@@ -12,13 +12,14 @@ namespace clubdeportivoV2.Entidades
         public string NombreC { get; }
         public string ApellidoC { get; }
         public string DniC { get; }
-        public int TelC { get; }
+        public string TelC { get; }
         public string CorreoC { get; }
         public string TipoC { get; }
+        public bool AptoFisico { get; set; }
         public bool EstadoC { get; }
 
         public E_Cliente(string nombreC, string apellidoC, string dniC,
-            int telC, string correoC, string tipoC, bool estadoC, int? idCliente = null)
+            string telC, string correoC, string tipoC, bool aptoFisico, bool estadoC, int? idCliente = null)
         {
             NombreC = nombreC;
             ApellidoC = apellidoC;
@@ -26,6 +27,7 @@ namespace clubdeportivoV2.Entidades
             TelC = telC;
             CorreoC = correoC;
             TipoC = tipoC;
+            AptoFisico = aptoFisico;
             EstadoC = estadoC;
             IdCliente = idCliente;
         }
