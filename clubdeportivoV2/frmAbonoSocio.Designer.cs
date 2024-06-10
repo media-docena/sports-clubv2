@@ -37,6 +37,7 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.btnVolverAbonoS = new System.Windows.Forms.Button();
             this.btnCarnet = new System.Windows.Forms.Button();
+            this.btnMenuPS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAbonarCuotaSocio
@@ -97,8 +98,12 @@
             // 
             // cboFormaPagoS
             // 
+            this.cboFormaPagoS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFormaPagoS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFormaPagoS.FormattingEnabled = true;
+            this.cboFormaPagoS.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta de crédito"});
             this.cboFormaPagoS.Location = new System.Drawing.Point(510, 207);
             this.cboFormaPagoS.Name = "cboFormaPagoS";
             this.cboFormaPagoS.Size = new System.Drawing.Size(316, 36);
@@ -145,11 +150,28 @@
             this.btnCarnet.Text = "GENERAR CARNET";
             this.btnCarnet.UseVisualStyleBackColor = false;
             // 
+            // btnMenuPS
+            // 
+            this.btnMenuPS.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPS.FlatAppearance.BorderSize = 0;
+            this.btnMenuPS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPS.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuPS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
+            this.btnMenuPS.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPS.Image")));
+            this.btnMenuPS.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuPS.Location = new System.Drawing.Point(1012, 641);
+            this.btnMenuPS.Name = "btnMenuPS";
+            this.btnMenuPS.Size = new System.Drawing.Size(242, 63);
+            this.btnMenuPS.TabIndex = 28;
+            this.btnMenuPS.Text = "IR AL MENU";
+            this.btnMenuPS.UseVisualStyleBackColor = false;
+            // 
             // frmAbonoSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 751);
+            this.Controls.Add(this.btnMenuPS);
             this.Controls.Add(this.btnCarnet);
             this.Controls.Add(this.btnVolverAbonoS);
             this.Controls.Add(this.txtMonto);
@@ -181,5 +203,6 @@
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Button btnVolverAbonoS;
         private System.Windows.Forms.Button btnCarnet;
+        private System.Windows.Forms.Button btnMenuPS;
     }
 }
