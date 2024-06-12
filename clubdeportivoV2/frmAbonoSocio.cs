@@ -138,6 +138,7 @@ namespace clubdeportivoV2
                     if (codigo == 1) {
                         MessageBox.Show("Cliente ya realizó el pago de la cuota a la fecha", "AVISO DEL SISTEMA", MessageBoxButtons.OK,
                        MessageBoxIcon.Error);
+                       btnRegistrarPagoS.Enabled = false;
                     }
                     else {
                         MessageBox.Show("Se registró con éxito el pago de la cuota", "AVISO DEL SISTEMA",
@@ -152,6 +153,15 @@ namespace clubdeportivoV2
                     }
                 }
             }
+        }
+
+        private void btnComprobanteS_Click(object sender, EventArgs e)
+        {
+            frmFactura factura = new frmFactura();
+            factura.cliente = cliente;
+            factura.cuota = cuota;
+            factura.Show();
+            this.Hide();
         }
     }
 }

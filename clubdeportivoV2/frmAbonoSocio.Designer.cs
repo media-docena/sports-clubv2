@@ -282,6 +282,7 @@
             this.btnComprobanteS.Text = "GENERAR COMPROBANTE";
             this.btnComprobanteS.UseVisualStyleBackColor = false;
             this.btnComprobanteS.Visible = false;
+            this.btnComprobanteS.Click += new System.EventHandler(this.btnComprobanteS_Click);
             // 
             // picMoneda
             // 
