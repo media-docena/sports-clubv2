@@ -31,5 +31,10 @@ namespace clubdeportivoV2.Entidades
             EstadoC = estadoC;
             IdCliente = idCliente;
         }
+
+        public virtual void abonar(E_Cuota cuota, int numCuotas) 
+        {
+            cuota.aplicarPromocion(numCuotas);
+        }
     }
 }

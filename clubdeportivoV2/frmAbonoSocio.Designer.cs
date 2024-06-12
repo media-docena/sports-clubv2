@@ -36,7 +36,7 @@
             this.cboFormaPagoS = new System.Windows.Forms.ComboBox();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.btnVolverAbonoS = new System.Windows.Forms.Button();
-            this.btnCarnetS = new System.Windows.Forms.Button();
+            this.btnCarnet = new System.Windows.Forms.Button();
             this.btnMenuPS = new System.Windows.Forms.Button();
             this.grpTarjetaS = new System.Windows.Forms.GroupBox();
             this.lblPromo6S = new System.Windows.Forms.Label();
@@ -46,7 +46,9 @@
             this.rdoCuota1 = new System.Windows.Forms.RadioButton();
             this.lblCreditoCuotaS = new System.Windows.Forms.Label();
             this.btnComprobanteS = new System.Windows.Forms.Button();
+            this.picMoneda = new System.Windows.Forms.PictureBox();
             this.grpTarjetaS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMoneda)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAbonarCuotaSocio
@@ -124,10 +126,10 @@
             // 
             this.txtMonto.BackColor = System.Drawing.Color.LightGray;
             this.txtMonto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(479, 292);
+            this.txtMonto.Location = new System.Drawing.Point(508, 292);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.ReadOnly = true;
-            this.txtMonto.Size = new System.Drawing.Size(313, 34);
+            this.txtMonto.Size = new System.Drawing.Size(284, 34);
             this.txtMonto.TabIndex = 25;
             this.txtMonto.Text = " 18000";
             // 
@@ -148,20 +150,20 @@
             this.btnVolverAbonoS.UseVisualStyleBackColor = false;
             this.btnVolverAbonoS.Click += new System.EventHandler(this.btnVolverAbonoS_Click);
             // 
-            // btnCarnetS
+            // btnCarnet
             // 
-            this.btnCarnetS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
-            this.btnCarnetS.FlatAppearance.BorderSize = 0;
-            this.btnCarnetS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarnetS.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarnetS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCarnetS.Location = new System.Drawing.Point(668, 465);
-            this.btnCarnetS.Name = "btnCarnetS";
-            this.btnCarnetS.Size = new System.Drawing.Size(157, 63);
-            this.btnCarnetS.TabIndex = 27;
-            this.btnCarnetS.Text = "GENERAR CARNET";
-            this.btnCarnetS.UseVisualStyleBackColor = false;
-            this.btnCarnetS.Visible = false;
+            this.btnCarnet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
+            this.btnCarnet.FlatAppearance.BorderSize = 0;
+            this.btnCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarnet.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarnet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCarnet.Location = new System.Drawing.Point(668, 465);
+            this.btnCarnet.Name = "btnCarnet";
+            this.btnCarnet.Size = new System.Drawing.Size(157, 63);
+            this.btnCarnet.TabIndex = 27;
+            this.btnCarnet.Text = "GENERAR CARNET";
+            this.btnCarnet.UseVisualStyleBackColor = false;
+            this.btnCarnet.Visible = false;
             // 
             // btnMenuPS
             // 
@@ -273,24 +275,36 @@
             this.btnComprobanteS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprobanteS.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprobanteS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnComprobanteS.Location = new System.Drawing.Point(280, 465);
+            this.btnComprobanteS.Location = new System.Drawing.Point(262, 465);
             this.btnComprobanteS.Name = "btnComprobanteS";
-            this.btnComprobanteS.Size = new System.Drawing.Size(157, 63);
+            this.btnComprobanteS.Size = new System.Drawing.Size(175, 63);
             this.btnComprobanteS.TabIndex = 31;
             this.btnComprobanteS.Text = "GENERAR COMPROBANTE";
             this.btnComprobanteS.UseVisualStyleBackColor = false;
             this.btnComprobanteS.Visible = false;
+            // 
+            // picMoneda
+            // 
+            this.picMoneda.BackColor = System.Drawing.Color.LightGray;
+            this.picMoneda.Image = ((System.Drawing.Image)(resources.GetObject("picMoneda.Image")));
+            this.picMoneda.Location = new System.Drawing.Point(476, 293);
+            this.picMoneda.Name = "picMoneda";
+            this.picMoneda.Size = new System.Drawing.Size(34, 34);
+            this.picMoneda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMoneda.TabIndex = 32;
+            this.picMoneda.TabStop = false;
             // 
             // frmAbonoSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 751);
+            this.Controls.Add(this.picMoneda);
             this.Controls.Add(this.btnComprobanteS);
             this.Controls.Add(this.lblCreditoCuotaS);
             this.Controls.Add(this.grpTarjetaS);
             this.Controls.Add(this.btnMenuPS);
-            this.Controls.Add(this.btnCarnetS);
+            this.Controls.Add(this.btnCarnet);
             this.Controls.Add(this.btnVolverAbonoS);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.cboFormaPagoS);
@@ -307,6 +321,7 @@
             this.Text = "VENTANA ABONO SOCIO";
             this.grpTarjetaS.ResumeLayout(false);
             this.grpTarjetaS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMoneda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,7 +337,7 @@
         private System.Windows.Forms.ComboBox cboFormaPagoS;
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Button btnVolverAbonoS;
-        private System.Windows.Forms.Button btnCarnetS;
+        private System.Windows.Forms.Button btnCarnet;
         private System.Windows.Forms.Button btnMenuPS;
         private System.Windows.Forms.GroupBox grpTarjetaS;
         private System.Windows.Forms.RadioButton rdoCuota1;
@@ -332,5 +347,6 @@
         private System.Windows.Forms.Label lblPromo6S;
         private System.Windows.Forms.Label lblCreditoCuotaS;
         private System.Windows.Forms.Button btnComprobanteS;
+        private System.Windows.Forms.PictureBox picMoneda;
     }
 }

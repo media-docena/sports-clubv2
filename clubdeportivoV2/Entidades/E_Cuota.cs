@@ -11,7 +11,7 @@ namespace clubdeportivoV2.Entidades
         public int? Id { get; }
         public DateTime Fecha { get; }
         public double Monto { get; set; }
-        public int IdCliente { get; }
+        public int IdCliente { get; set; }
         public string FormaPago { get; }
         public DateTime FechaVencimiento { get; }
         public bool TienePromo { get; }
