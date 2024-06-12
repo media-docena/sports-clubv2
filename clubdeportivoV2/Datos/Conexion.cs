@@ -22,7 +22,7 @@ namespace clubdeportivoV2.Datos
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "";
+            this.clave = "roocohEN1948";
         }
         // proceso de interacción
         public MySqlConnection CrearConexion()

@@ -60,6 +60,7 @@
             this.btnConfirmarPreAbono.TabIndex = 5;
             this.btnConfirmarPreAbono.Text = "CONFIRMAR";
             this.btnConfirmarPreAbono.UseVisualStyleBackColor = false;
+            this.btnConfirmarPreAbono.Click += new System.EventHandler(this.btnConfirmarPreAbono_Click);
             // 
             // lblIdPreAbono
             // 
@@ -86,6 +87,7 @@
             // 
             this.txtIdPreAbono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdPreAbono.Location = new System.Drawing.Point(446, 237);
+            this.txtIdPreAbono.MaxLength = 9;
             this.txtIdPreAbono.Name = "txtIdPreAbono";
             this.txtIdPreAbono.Size = new System.Drawing.Size(371, 34);
             this.txtIdPreAbono.TabIndex = 17;
@@ -105,6 +107,7 @@
             this.btnVolverPreAbono.TabIndex = 22;
             this.btnVolverPreAbono.Text = "VOLVER";
             this.btnVolverPreAbono.UseVisualStyleBackColor = false;
+            this.btnVolverPreAbono.Click += new System.EventHandler(this.btnVolverPreAbono_Click);
             // 
             // frmPreAbono
             // 
