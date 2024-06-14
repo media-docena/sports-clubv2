@@ -100,8 +100,10 @@
   <ItemGroup>
     <Compile Include="Datos\Clientes.cs" />
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\Cuotas.cs" />
     <Compile Include="Datos\Sesion.cs" />
     <Compile Include="Datos\Usuarios.cs" />
+    <Compile Include="Entidades\E_Actividad.cs" />
     <Compile Include="Entidades\E_Cliente.cs" />
     <Compile Include="Entidades\E_Cuota.cs" />
     <Compile Include="Entidades\E_No_Socio.cs" />
@@ -111,6 +113,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbonoNoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbonoNoSocio.Designer.cs">
+      <DependentUpon>frmAbonoNoSocio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAbonoSocio.cs">
       <SubType>Form</SubType>
@@ -123,6 +131,11 @@
     </Compile>
     <Compile Include="frmCarnet.Designer.cs">
       <DependentUpon>frmCarnet.cs</DependentUpon>
+    <Compile Include="frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPreAbono.cs">
       <SubType>Form</SubType>
@@ -153,11 +166,16 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAbonoNoSocio.resx">
+      <DependentUpon>frmAbonoNoSocio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAbonoSocio.resx">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarnet.resx">
       <DependentUpon>frmCarnet.cs</DependentUpon>
+    <EmbeddedResource Include="frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPreAbono.resx">
       <DependentUpon>frmPreAbono.cs</DependentUpon>
