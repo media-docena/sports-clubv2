@@ -161,7 +161,7 @@ namespace clubdeportivoV2
             factura.cliente = cliente;
             factura.cuota = cuota;
             factura.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

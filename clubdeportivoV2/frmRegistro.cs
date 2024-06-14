@@ -29,7 +29,7 @@ namespace clubdeportivoV2
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
             if (txtNombreC.Text == "" || txtApellidoC.Text == "" || txtTelC.Text == ""
-                || txtCorreoC.Text == "" || cboTipoC.Text == "" || txtDNIC.Text == "") {
+                || txtCorreoC.Text == "" || cboTipoC.Text == "" || txtDNIC.Text == "" || !validarRButtons()) {
                 MessageBox.Show("Debe completar datos requeridos (*) ",
                 "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -99,6 +99,11 @@ namespace clubdeportivoV2
         private void rdoNo_CheckedChanged(object sender, EventArgs e)
         {
             aptoFisico = false;
+        }
+
+        private bool validarRButtons() 
+        {
+            return rdoSi.Checked || rdoNo.Checked;
         }
     }
 }

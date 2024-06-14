@@ -103,6 +103,7 @@
     <Compile Include="Datos\Cuotas.cs" />
     <Compile Include="Datos\Sesion.cs" />
     <Compile Include="Datos\Usuarios.cs" />
+    <Compile Include="Entidades\E_Actividad.cs" />
     <Compile Include="Entidades\E_Cliente.cs" />
     <Compile Include="Entidades\E_Cuota.cs" />
     <Compile Include="Entidades\E_No_Socio.cs" />
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbonoNoSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbonoNoSocio.Designer.cs">
+      <DependentUpon>frmAbonoNoSocio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAbonoSocio.cs">
       <SubType>Form</SubType>
@@ -153,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbonoNoSocio.resx">
+      <DependentUpon>frmAbonoNoSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbonoSocio.resx">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>

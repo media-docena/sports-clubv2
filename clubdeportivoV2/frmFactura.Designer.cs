@@ -31,13 +31,14 @@
             this.pnlFtop = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.btnVolverRegC = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTotalF = new System.Windows.Forms.Label();
             this.lblMoneda = new System.Windows.Forms.Label();
             this.lblCurrency = new System.Windows.Forms.Label();
             this.pnlCentro1 = new System.Windows.Forms.Panel();
+            this.lblFormaP = new System.Windows.Forms.Label();
+            this.lblFP = new System.Windows.Forms.Label();
             this.lblFVenc = new System.Windows.Forms.Label();
             this.lblFV = new System.Windows.Forms.Label();
             this.lblTelClub = new System.Windows.Forms.Label();
@@ -55,8 +56,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblRecibi = new System.Windows.Forms.Label();
             this.printFactura = new System.Drawing.Printing.PrintDocument();
-            this.lblFP = new System.Windows.Forms.Label();
-            this.lblFormaP = new System.Windows.Forms.Label();
             this.pnlFtop.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.pnlCentro1.SuspendLayout();
@@ -73,7 +72,7 @@
             this.pnlFtop.ForeColor = System.Drawing.Color.White;
             this.pnlFtop.Location = new System.Drawing.Point(0, 0);
             this.pnlFtop.Name = "pnlFtop";
-            this.pnlFtop.Size = new System.Drawing.Size(718, 104);
+            this.pnlFtop.Size = new System.Drawing.Size(722, 104);
             this.pnlFtop.TabIndex = 0;
             // 
             // lblTitulo
@@ -90,7 +89,6 @@
             // pnlBottom
             // 
             this.pnlBottom.BackColor = System.Drawing.Color.White;
-            this.pnlBottom.Controls.Add(this.btnVolverRegC);
             this.pnlBottom.Controls.Add(this.btnImprimir);
             this.pnlBottom.Controls.Add(this.lblTotal);
             this.pnlBottom.Controls.Add(this.lblTotalF);
@@ -99,25 +97,8 @@
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(0, 557);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(718, 130);
+            this.pnlBottom.Size = new System.Drawing.Size(722, 130);
             this.pnlBottom.TabIndex = 1;
-            // 
-            // btnVolverRegC
-            // 
-            this.btnVolverRegC.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolverRegC.FlatAppearance.BorderSize = 0;
-            this.btnVolverRegC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverRegC.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverRegC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(51)))));
-            this.btnVolverRegC.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverRegC.Image")));
-            this.btnVolverRegC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolverRegC.Location = new System.Drawing.Point(6, 76);
-            this.btnVolverRegC.Name = "btnVolverRegC";
-            this.btnVolverRegC.Size = new System.Drawing.Size(212, 43);
-            this.btnVolverRegC.TabIndex = 22;
-            this.btnVolverRegC.Text = "VOLVER";
-            this.btnVolverRegC.UseVisualStyleBackColor = false;
-            this.btnVolverRegC.Click += new System.EventHandler(this.btnVolverRegC_Click);
             // 
             // btnImprimir
             // 
@@ -125,7 +106,7 @@
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(21, 14);
+            this.btnImprimir.Location = new System.Drawing.Point(27, 37);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(143, 46);
             this.btnImprimir.TabIndex = 19;
@@ -199,8 +180,30 @@
             this.pnlCentro1.Controls.Add(this.pictureBox1);
             this.pnlCentro1.Location = new System.Drawing.Point(0, 110);
             this.pnlCentro1.Name = "pnlCentro1";
-            this.pnlCentro1.Size = new System.Drawing.Size(718, 242);
+            this.pnlCentro1.Size = new System.Drawing.Size(722, 242);
             this.pnlCentro1.TabIndex = 2;
+            // 
+            // lblFormaP
+            // 
+            this.lblFormaP.AutoSize = true;
+            this.lblFormaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFormaP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormaP.Location = new System.Drawing.Point(504, 132);
+            this.lblFormaP.Name = "lblFormaP";
+            this.lblFormaP.Size = new System.Drawing.Size(190, 25);
+            this.lblFormaP.TabIndex = 12;
+            this.lblFormaP.Text = "Tarjeta de crédito";
+            // 
+            // lblFP
+            // 
+            this.lblFP.AutoSize = true;
+            this.lblFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFP.Location = new System.Drawing.Point(322, 132);
+            this.lblFP.Name = "lblFP";
+            this.lblFP.Size = new System.Drawing.Size(167, 25);
+            this.lblFP.TabIndex = 11;
+            this.lblFP.Text = "Forma de Pago";
             // 
             // lblFVenc
             // 
@@ -314,7 +317,7 @@
             this.pnlCentro2.Controls.Add(this.lblRecibi);
             this.pnlCentro2.Location = new System.Drawing.Point(0, 358);
             this.pnlCentro2.Name = "pnlCentro2";
-            this.pnlCentro2.Size = new System.Drawing.Size(718, 193);
+            this.pnlCentro2.Size = new System.Drawing.Size(722, 193);
             this.pnlCentro2.TabIndex = 3;
             // 
             // lblConcepto
@@ -335,7 +338,7 @@
             this.lblConceptoF.BackColor = System.Drawing.Color.White;
             this.lblConceptoF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblConceptoF.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConceptoF.Location = new System.Drawing.Point(293, 126);
+            this.lblConceptoF.Location = new System.Drawing.Point(295, 126);
             this.lblConceptoF.Name = "lblConceptoF";
             this.lblConceptoF.Size = new System.Drawing.Size(258, 25);
             this.lblConceptoF.TabIndex = 13;
@@ -393,33 +396,11 @@
             // 
             this.printFactura.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printFactura_PrintPage);
             // 
-            // lblFP
-            // 
-            this.lblFP.AutoSize = true;
-            this.lblFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFP.Location = new System.Drawing.Point(322, 132);
-            this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(167, 25);
-            this.lblFP.TabIndex = 11;
-            this.lblFP.Text = "Forma de Pago";
-            // 
-            // lblFormaP
-            // 
-            this.lblFormaP.AutoSize = true;
-            this.lblFormaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblFormaP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormaP.Location = new System.Drawing.Point(504, 132);
-            this.lblFormaP.Name = "lblFormaP";
-            this.lblFormaP.Size = new System.Drawing.Size(190, 25);
-            this.lblFormaP.TabIndex = 12;
-            this.lblFormaP.Text = "Tarjeta de crédito";
-            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 687);
+            this.ClientSize = new System.Drawing.Size(722, 687);
             this.Controls.Add(this.pnlCentro2);
             this.Controls.Add(this.pnlCentro1);
             this.Controls.Add(this.pnlBottom);
@@ -471,7 +452,6 @@
         private System.Windows.Forms.Label lblTotalF;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnVolverRegC;
         private System.Drawing.Printing.PrintDocument printFactura;
         private System.Windows.Forms.Label lblFP;
         private System.Windows.Forms.Label lblFormaP;

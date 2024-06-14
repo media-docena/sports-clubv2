@@ -78,7 +78,7 @@ namespace clubdeportivoV2
                     AptoFisico_c = reader.GetBoolean(7);
                     Estado_c = reader.GetBoolean(8);
 
-                    // Chequemos el tipo de cliente 
+                    // Chequeamos el tipo de cliente 
                     if (Tipo_c.ToLower().Equals("socio")) {
                         
                         cliente = new E_Socio(Nombre_c, Apellido_c, DNI_c, Tel_c, 
@@ -107,17 +107,26 @@ namespace clubdeportivoV2
         private void btnConfirmarPreAbono_Click(object sender, EventArgs e)
         {
             frmAbonoSocio formAbonoSocio = new frmAbonoSocio();
+            frmAbonoNoSocio formAbonoNSocio = new frmAbonoNoSocio();
             int identificacion;
 
             // Validamos que la entrada no esté vacía sea numérica
             if (txtIdPreAbono.Text.Trim() != "" && Int32.TryParse(txtIdPreAbono.Text.Trim(), out identificacion)) {
-                formAbonoSocio.cliente = ValidarCliente(identificacion);
-                /**
+                E_Cliente cliente = ValidarCliente(identificacion);
+                
+                /*------------------------------------------------
                  * Chequeamos si el cliente es socio y pasamos
                  * a su formulario de pago
-                 */
-                if (formAbonoSocio.cliente != null && formAbonoSocio.cliente.TipoC.ToLower().Equals("socio")) {
+                 *------------------------------------------------*/
+                if (cliente != null && cliente.TipoC.ToLower().Equals("socio")) {
+                    formAbonoSocio.cliente = cliente;
                     formAbonoSocio.Show();
+                    this.Hide();
+                }
+                else if (cliente != null && cliente.TipoC.ToLower().Equals("no socio")) 
+                {
+                    formAbonoNSocio.cliente = cliente;
+                    formAbonoNSocio.Show();
                     this.Hide();
                 }
                 else {

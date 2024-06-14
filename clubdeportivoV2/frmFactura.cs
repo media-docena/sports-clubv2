@@ -78,6 +78,9 @@ namespace clubdeportivoV2
 
             MessageBox.Show("Operación existosa", "AVISO DEL SISTEMA",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Close();
         }
     }
 }
