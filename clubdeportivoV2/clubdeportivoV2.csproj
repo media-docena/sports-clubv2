@@ -126,6 +126,11 @@
     <Compile Include="frmAbonoSocio.Designer.cs">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCarnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarnet.Designer.cs">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
     <Compile Include="frmFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +172,8 @@
     <EmbeddedResource Include="frmAbonoSocio.resx">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCarnet.resx">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
     <EmbeddedResource Include="frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -205,6 +213,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\clubdepor-logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
