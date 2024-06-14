@@ -17,6 +17,7 @@ namespace clubdeportivoV2.Entidades
         public string TipoC { get; }
         public bool AptoFisico { get; set; }
         public bool EstadoC { get; }
+        public List<E_Actividad> Actividades { get; } = new List<E_Actividad>();
 
         public E_Cliente(string nombreC, string apellidoC, string dniC,
             string telC, string correoC, string tipoC, bool aptoFisico, bool estadoC, int? idCliente = null)
@@ -30,6 +31,16 @@ namespace clubdeportivoV2.Entidades
             AptoFisico = aptoFisico;
             EstadoC = estadoC;
             IdCliente = idCliente;
+        }
+
+        public virtual void abonar(E_Cuota cuota, int numCuotas) 
+        {
+            cuota.aplicarPromocion(numCuotas);
+        }
+
+        public void agregarActividad(E_Actividad actividad)
+        { 
+            Actividades.Add(actividad);
         }
     }
 }

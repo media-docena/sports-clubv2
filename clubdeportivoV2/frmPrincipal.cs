@@ -47,5 +47,12 @@ namespace clubdeportivoV2
             listaCuotas.Show();
             this.Hide();
         }
+
+        private void btnAbonar_Click(object sender, EventArgs e)
+        {
+            frmPreAbono fPreAbono = new frmPreAbono();
+            fPreAbono.Show();
+            this.Hide();
+        }
     }
 }

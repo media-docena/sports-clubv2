@@ -133,6 +133,7 @@
             this.btnAbonar.TabIndex = 2;
             this.btnAbonar.Text = "ABONAR";
             this.btnAbonar.UseVisualStyleBackColor = false;
+            this.btnAbonar.Click += new System.EventHandler(this.btnAbonar_Click);
             // 
             // btnListarCuotasVenc
             // 
