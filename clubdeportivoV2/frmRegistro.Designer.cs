@@ -29,7 +29,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro));
             this.picRegC = new System.Windows.Forms.PictureBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnVerClientes = new System.Windows.Forms.Button();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.lblRegC = new System.Windows.Forms.Label();
             this.txtNombreC = new System.Windows.Forms.TextBox();
@@ -69,20 +69,20 @@
             this.picRegC.TabIndex = 0;
             this.picRegC.TabStop = false;
             // 
-            // btnLimpiar
+            // btnVerClientes
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(196)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLimpiar.Location = new System.Drawing.Point(445, 541);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(157, 63);
-            this.btnLimpiar.TabIndex = 1;
-            this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnVerClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(196)))));
+            this.btnVerClientes.FlatAppearance.BorderSize = 0;
+            this.btnVerClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVerClientes.Location = new System.Drawing.Point(445, 541);
+            this.btnVerClientes.Name = "btnVerClientes";
+            this.btnVerClientes.Size = new System.Drawing.Size(157, 63);
+            this.btnVerClientes.TabIndex = 1;
+            this.btnVerClientes.Text = "VER CLIENTES";
+            this.btnVerClientes.UseVisualStyleBackColor = false;
+            this.btnVerClientes.Click += new System.EventHandler(this.btnVerClientes_Click);
             // 
             // btnRegistrarCliente
             // 
@@ -377,7 +377,7 @@
             this.Controls.Add(this.txtNombreC);
             this.Controls.Add(this.lblRegC);
             this.Controls.Add(this.btnRegistrarCliente);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnVerClientes);
             this.Controls.Add(this.picRegC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -396,7 +396,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picRegC;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnVerClientes;
         private System.Windows.Forms.Button btnRegistrarCliente;
         private System.Windows.Forms.Label lblRegC;
         private System.Windows.Forms.TextBox txtNombreC;

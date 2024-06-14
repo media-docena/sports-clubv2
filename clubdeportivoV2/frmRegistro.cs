@@ -1,4 +1,6 @@
-﻿using clubdeportivoV2.Entidades;
+﻿using clubdeportivoV2.Datos;
+using clubdeportivoV2.Entidades;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +67,7 @@ namespace clubdeportivoV2
                     else {
                         MessageBox.Show("Se almacenó con éxito con el codigo Nro  " + respuesta, "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiarCasillas();
                     }
                 }
             }
@@ -77,20 +80,6 @@ namespace clubdeportivoV2
             principal.Show();
             this.Hide();
         }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtNombreC.Text = "";
-            txtApellidoC.Text = "";
-            txtTelC.Text = "";
-            txtCorreoC.Text = "";
-            txtDNIC.Text = "";
-            cboTipoC.Text = "";
-            rdoSi.Checked = false;
-            rdoNo.Checked = false;
-            txtNombreC.Focus();
-        }
-
         private void rdoSi_CheckedChanged(object sender, EventArgs e)
         {
             aptoFisico = true;
@@ -104,6 +93,25 @@ namespace clubdeportivoV2
         private bool validarRButtons() 
         {
             return rdoSi.Checked || rdoNo.Checked;
+        }
+
+        private void limpiarCasillas()
+        {
+            txtNombreC.Text = "";
+            txtApellidoC.Text = "";
+            txtTelC.Text = "";
+            txtCorreoC.Text = "";
+            txtDNIC.Text = "";
+            cboTipoC.Text = "";
+            rdoSi.Checked = false;
+            rdoNo.Checked = false;
+            txtNombreC.Focus();
+        }
+        private void btnVerClientes_Click(object sender, EventArgs e)
+        {
+            frmClientes listaClientes = new frmClientes();
+            listaClientes.Show();
+            this.Hide();
         }
     }
 }
