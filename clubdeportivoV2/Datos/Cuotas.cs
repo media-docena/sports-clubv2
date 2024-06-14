@@ -50,7 +50,7 @@ namespace clubdeportivoV2.Datos
             return salida;
         }
 
-        public void Abono_NoSocio(E_Cuota cuota, E_Actividad actividad)
+        public string Abono_NoSocio(E_Cuota cuota, E_Actividad actividad)
         {
             string salida;
             MySqlConnection sqlCon = new MySqlConnection();
@@ -88,6 +88,8 @@ namespace clubdeportivoV2.Datos
                     sqlCon.Close();
                 }
             }
+
+            return salida;
         }
         
     }

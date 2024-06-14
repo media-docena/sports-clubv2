@@ -66,11 +66,11 @@
             // 
             this.lblIdPreAbono.AutoSize = true;
             this.lblIdPreAbono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdPreAbono.Location = new System.Drawing.Point(271, 236);
+            this.lblIdPreAbono.Location = new System.Drawing.Point(315, 236);
             this.lblIdPreAbono.Name = "lblIdPreAbono";
-            this.lblIdPreAbono.Size = new System.Drawing.Size(152, 28);
+            this.lblIdPreAbono.Size = new System.Drawing.Size(96, 28);
             this.lblIdPreAbono.TabIndex = 19;
-            this.lblIdPreAbono.Text = "ID Cliente o DNI";
+            this.lblIdPreAbono.Text = "ID Cliente";
             // 
             // lblAsterisco7
             // 

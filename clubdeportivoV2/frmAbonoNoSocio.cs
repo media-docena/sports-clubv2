@@ -1,5 +1,6 @@
 ﻿using clubdeportivoV2.Datos;
 using clubdeportivoV2.Entidades;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -84,13 +85,14 @@ namespace clubdeportivoV2
 
         private void limpiarCheckbox()
         {
+            // Limpia la columna entera de los checkboxes
             foreach (DataGridViewRow fila in dgvListActividades.Rows) {
 
-                bool seleccionada = (bool)fila.Cells["inscrip"].Value;
+                var checkValor = fila.Cells["inscrip"].Value;
 
-                if (seleccionada) {
+                if (checkValor != null && Convert.ToBoolean(checkValor)) {
 
-                    seleccionada = false;
+                    fila.Cells["inscrip"].Value = false;
                 }
             }
         }
@@ -136,7 +138,7 @@ namespace clubdeportivoV2
                 }
 
                 /*-----------------------------------------
-                 * Declaramos y asignamos las varibles necesarias 
+                 * Declaramos y asignamos las variables necesarias 
                  * para instanciar la cuota que debe abonar el cliente
                  *-------------------------------------------------------*/
                 DateTime fecha = DateTime.Now;
@@ -161,7 +163,7 @@ namespace clubdeportivoV2
 
                 // instanciamos para usar el método de cuotas
                 Cuotas cuotas = new Cuotas();
-                string respuesta = cuotas.Abono_Socio(cuota);
+                string respuesta = cuotas.Abono_NoSocio(cuota, actividad);
 
                 bool esnumero = int.TryParse(respuesta, out int codigo);
 
@@ -169,20 +171,14 @@ namespace clubdeportivoV2
                     if (codigo == 1) {
                         MessageBox.Show("Cliente ya realizó el pago de la actividad",
                             "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        btnRegPagoNS.Enabled = false;
+                        
                         limpiarCheckbox();
                     }
-                    //else if (codigo == 2) {
-                    //    MessageBox.Show("Hubo un error durante el proceso de registro y pago de la actividad",
-                    //        "AVISO DEL SISTEMA", MessageBoxButtons.OK,
-                    //   MessageBoxIcon.Error);
-                    //    limpiarCheckbox();
-                    //}
-                    //else if (codigo == 2) {
-                    //    MessageBox.Show("No hay cupo disponible en la actividad seleccionada.",
-                    //        "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    limpiarCheckbox();
-                    //}
+                    else if (codigo == 2) {
+                        MessageBox.Show("No hay cupo disponible en la actividad seleccionada.",
+                            "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        limpiarCheckbox();
+                    }
                     else {
                         MessageBox.Show("Se registró con éxito el pago de la cuota", "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -194,8 +190,7 @@ namespace clubdeportivoV2
                         limpiarCasillas();
                         // Hacemos visible el boton para ir a comprobante de pago
                         btnComprob.Visible = true;
-                        // Deshabilitamos el botón de registro de pago
-                        btnRegPagoNS.Enabled = false;
+                        
                         // Ocultamos el groupbox que contiene las opciones de crédito
                         grpTarjetaNS.Visible = false;
                         lblCreditoCuotaNS.Visible = false;

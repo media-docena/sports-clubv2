@@ -50,7 +50,7 @@ namespace clubdeportivoV2
                 string query;
                 sqlCon = Conexion.getInstancia().CrearConexion();
                 query = $"select idCliente, nombreC, apellidoC, DNIC, telC, correoC, tipoC, aptoFisico, estadoC " +
-                        $"from clientes where idCliente = {identificacion} or DNIC = {identificacion};";
+                        $"from clientes where idCliente = {identificacion};";
 
 
                 MySqlCommand comando = new MySqlCommand(query, sqlCon);
