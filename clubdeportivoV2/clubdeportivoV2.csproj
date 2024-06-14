@@ -126,6 +126,12 @@
     <Compile Include="frmAbonoSocio.Designer.cs">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCarnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarnet.Designer.cs">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbonoSocio.resx">
       <DependentUpon>frmAbonoSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarnet.resx">
+      <DependentUpon>frmCarnet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>

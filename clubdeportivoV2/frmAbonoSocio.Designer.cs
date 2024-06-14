@@ -163,7 +163,7 @@
             this.btnCarnet.TabIndex = 27;
             this.btnCarnet.Text = "GENERAR CARNET";
             this.btnCarnet.UseVisualStyleBackColor = false;
-            this.btnCarnet.Visible = false;
+            this.btnCarnet.Click += new System.EventHandler(this.btnCarnet_Click);
             // 
             // btnMenuPS
             // 

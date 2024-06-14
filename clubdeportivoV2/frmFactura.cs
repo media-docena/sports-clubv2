@@ -39,14 +39,6 @@ namespace clubdeportivoV2
             lblTotal.Text = cuota.Monto.ToString();
         }
 
-        private void btnVolverRegC_Click(object sender, EventArgs e)
-        {
-            frmPrincipal principal = new frmPrincipal();
-            principal.Show();
-            this.Close();
-
-        }
-
         private void printFactura_PrintPage(object sender, PrintPageEventArgs e)
         {
             int x = SystemInformation.WorkingArea.X;

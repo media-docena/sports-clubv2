@@ -145,7 +145,6 @@ namespace clubdeportivoV2
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         limpiarCasillas();
-                        btnCarnet.Visible = true;
                         btnComprobanteS.Visible = true;
                         btnRegistrarPagoS.Enabled = false;
                         grpTarjetaS.Visible = false;
@@ -161,6 +160,14 @@ namespace clubdeportivoV2
             factura.cliente = cliente;
             factura.cuota = cuota;
             factura.Show();
+            this.Close();
+        }
+
+        private void btnCarnet_Click(object sender, EventArgs e)
+        {
+            frmCarnet carnet = new frmCarnet();
+            carnet.cliente = cliente;
+            carnet.Show();
             this.Close();
         }
     }
